@@ -40,13 +40,13 @@ async def delete_(id: str):
 
 
 @router.get("/{id}")
- async def get_by_id(id: str):
-     try:
-         result = await log_logic.get_by_id(id)
-         return result
-     except Exception as e:
-         print(f"Failed to retrieve entry: {str(e)}")
-         raise HTTPException(status_code=500, detail="Failed to retrieve")
+async def get_by_id(id: str):
+    try:
+        result = await log_logic.get_by_id(id)
+        return result
+    except Exception as e:
+        print(f"Failed to retrieve entry: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve")
 
 
 @router.get("/")
