@@ -61,7 +61,7 @@ class MONGOCRUD:
         cursor = self.collection.find(filter)
         results = []
         async for document in cursor:
-            document['_id'] = str(document['_id'])  # Convertir ObjectId a string
+            document['_id'] = str(document['_id'])  
             results.append(document)
 
         return results
@@ -70,15 +70,14 @@ class MONGOCRUD:
         cursor = self.collection.find(filter).sort("timestamp", -1)  # -1 para orden descendente
         results = []
         async for document in cursor:
-            document['_id'] = str(document['_id'])  # Convertir ObjectId a string
+            document['_id'] = str(document['_id'])  
             results.append(document)
 
         return results
 
     async def encuentra_uno(self, filter: dict) -> dict:
-        # Usamos find_one con el filtro proporcionado
         item = await self.collection.find_one(filter)
         if item:
-            item["_id"] = str(item["_id"])  # Convertir ObjectId a string
+            item["_id"] = str(item["_id"])  
             return item
-        return None  # Retorna None si no encuentra el documento
+        return None 

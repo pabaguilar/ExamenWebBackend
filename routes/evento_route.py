@@ -80,7 +80,7 @@ async def get_by_id(id: str):
 
 # ------------------------------------ FIN ALTERNATIVOS -------------------------------------------
 
-# GET ALL
+
 @router.get("/")
 async def get_all(
     nombre: Optional[str] =  Query(None),
