@@ -50,7 +50,6 @@ async def get_by_id(id: str):
 
 # -------------------------------- ALTERNATIVOS --------------------------------------------------
 
-
 # @router.put("/{email}/update")
 # async def put_by_(email: str,input: primerSchema = Body(...)):
 #     try:
