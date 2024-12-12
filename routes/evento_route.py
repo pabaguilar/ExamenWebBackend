@@ -48,6 +48,7 @@ async def get_by_id(id: str):
         print(f"Failed to retrieve entry: {str(e)}")
         raise HTTPException(status_code=500, detail="Failed to retrieve")
 
+
 # -------------------------------- ALTERNATIVOS --------------------------------------------------
 
 # @router.put("/{email}/update")
